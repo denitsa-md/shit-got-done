@@ -1,6 +1,6 @@
 # Shit I got done
 
-Tells you what you did on Clubhouse today/yesterday/this week ...in case you forgot.
+Tells you what you did on Clubhouse today/yesterday/this week. Because sometimes we forget what we did yesterday
 
 ## Installation
 
