@@ -1,0 +1,56 @@
+{
+    "name": "denitsa/shit-got-done",
+    "description": "Tells you what you did on Clubhouse today/yesterday/this week ...in case you forgot.",
+    "keywords": [
+        "denitsa",
+        "shit-got-done"
+    ],
+    "homepage": "https://github.com/denitsa/shit-got-done",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Denitsa Mlechkova",
+            "email": "dmlechkova@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "guzzlehttp/guzzle": "^6.5",
+        "illuminate/support": "^7.0",
+        "spatie/data-transfer-object": "^2.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Denitsa\\ShitGotDone\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Denitsa\\ShitGotDone\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Denitsa\\ShitGotDone\\ShitGotDoneServiceProvider"
+            ],
+            "aliases": {
+                "ShitGotDone": "Denitsa\\ShitGotDone\\ShitGotDoneFacade"
+            }
+        }
+    }
+}
