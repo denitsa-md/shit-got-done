@@ -39,7 +39,7 @@ class ShitGotDoneCommand extends Command
      */
     public function __construct()
     {
-        $this->clubhouseOwner = config('shit-got-done.clubhouse_owner');
+        $this->clubhouseOwner = config('shit-got-done.clubhouse_user');
         $this->clubhouseUrl = 'https://api.clubhouse.io/api/v3/search/stories?token=' . config('shit-got-done.clubhouse_token') . '&';
         parent::__construct();
     }

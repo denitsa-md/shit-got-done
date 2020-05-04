@@ -10,10 +10,11 @@ composer require --dev denitsa/shit-got-done
 
 ## Usage
 
-Set you Clubhouse API token in your `.env` file as: 
+Set you Clubhouse API token and user in your `.env` file as: 
 
 ```bash
 CLUBHOUSE_API_TOKEN=
+CLUBHOUSE_USER=
 ```
 
 Run the following command to see the shit you got done this week.
