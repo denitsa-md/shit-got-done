@@ -16,7 +16,7 @@ class ShitGotDoneCommand extends Command
 {
     private string $clubhouseOwner;
     private string $clubhouseUrl;
-    
+
     /**
      * The name and signature of the console command.
      *
