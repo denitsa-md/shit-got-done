@@ -76,7 +76,8 @@ class ShitGotDoneCommand extends Command
     private function currentlyInDevelopment() {
            $query = Arr::query([
                 'page_size' => 25,
-                'query' => "state:'in development' !is:archived owner: $this->clubhouseOwner"]);
+                'query' => "state:\"in development\" !is:archived owner:$this->clubhouseOwner"
+           ]);
 
             $response = Http::get($this->clubhouseUrl . $query)->json();
 
@@ -86,7 +87,8 @@ class ShitGotDoneCommand extends Command
     private function readyForReviewThisWeek() {
            $query = Arr::query([
                 'page_size' => 25,
-                'query' => "state:'ready for review' !is:archived owner:$this->clubhouseOwner"]);
+                'query' => "state:\"ready for review\" !is:archived owner:$this->clubhouseOwner"
+           ]);
 
             $response = Http::get($this->clubhouseUrl . $query)->json();
 
@@ -99,7 +101,8 @@ class ShitGotDoneCommand extends Command
 
            $query = Arr::query([
                 'page_size' => 25,
-                'query' => "is:done moved:{$startOfWeek}..{$endOfWeek} !is:archived owner:$this->clubhouseOwner"]);
+                'query' => "is:done moved:{$startOfWeek}..{$endOfWeek} !is:archived owner:$this->clubhouseOwner"
+           ]);
 
             $response = Http::get($this->clubhouseUrl . $query)->json();
 
