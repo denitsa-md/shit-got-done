@@ -14,7 +14,9 @@ use Symfony\Component\Console\Helper\TableSeparator;
 
 class ShitGotDoneCommand extends Command
 {
-    private $clubhouseUrl;
+    private string $clubhouseOwner;
+    private string $clubhouseUrl;
+    
     /**
      * The name and signature of the console command.
      *
@@ -37,6 +39,7 @@ class ShitGotDoneCommand extends Command
      */
     public function __construct()
     {
+        $this->clubhouseOwner = config('shit-got-done.clubhouse_owner');
         $this->clubhouseUrl = 'https://api.clubhouse.io/api/v3/search/stories?token=' . config('shit-got-done.clubhouse_token') . '&';
         parent::__construct();
     }
@@ -73,7 +76,7 @@ class ShitGotDoneCommand extends Command
     private function currentlyInDevelopment() {
            $query = Arr::query([
                 'page_size' => 25,
-                'query' => 'state:"in development" !is:archived owner:denitsa']);
+                'query' => "state:'in development' !is:archived owner: $this->clubhouseOwner"]);
 
             $response = Http::get($this->clubhouseUrl . $query)->json();
 
@@ -83,7 +86,7 @@ class ShitGotDoneCommand extends Command
     private function readyForReviewThisWeek() {
            $query = Arr::query([
                 'page_size' => 25,
-                'query' => 'state:"ready for review" !is:archived owner:denitsa']);
+                'query' => "state:'ready for review' !is:archived owner:$this->clubhouseOwner"]);
 
             $response = Http::get($this->clubhouseUrl . $query)->json();
 
@@ -96,7 +99,7 @@ class ShitGotDoneCommand extends Command
 
            $query = Arr::query([
                 'page_size' => 25,
-                'query' => "is:done moved:{$startOfWeek}..{$endOfWeek} !is:archived owner:denitsa"]);
+                'query' => "is:done moved:{$startOfWeek}..{$endOfWeek} !is:archived owner:$this->clubhouseOwner"]);
 
             $response = Http::get($this->clubhouseUrl . $query)->json();
 
