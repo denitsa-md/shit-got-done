@@ -17,7 +17,7 @@ CLUBHOUSE_API_TOKEN=
 CLUBHOUSE_USER=
 ```
 
-Run the following command to see the shit you got done this week.
+Run the following command to see what you did this week.
 
 ```bash
 php artisan shit-got-done --this-week
