@@ -5,12 +5,20 @@ Tells you what you did on Clubhouse today/yesterday/this week ...in case you for
 ## Installation
 
 ```bash
-composer require denitsa/shit-got-done
+composer require --dev denitsa/shit-got-done
 ```
 
 ## Usage
 
-```python
+Set you Clubhouse API token in your `.env` file as: 
+
+```bash
+CLUBHOUSE_API_TOKEN=
+```
+
+Run the following command to see the shit you got done this week.
+
+```bash
 php artisan shit-got-done --this-week
 ```
 

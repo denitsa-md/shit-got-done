@@ -39,6 +39,9 @@ class ShitGotDoneServiceProvider extends ServiceProvider
             /*$this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/shit-got-done'),
             ], 'lang');*/
+
+            // Registering package commands.
+            $this->commands([ShitGotDoneCommand::class]);
         }
     }
 
@@ -54,8 +57,5 @@ class ShitGotDoneServiceProvider extends ServiceProvider
         $this->app->singleton('shit-got-done', function () {
             return new ShitGotDone;
         });
-
-        // Registering package commands.
-        $this->commands([ShitGotDoneCommand::class]);
     }
 }
