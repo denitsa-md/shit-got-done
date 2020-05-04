@@ -1,4 +1,4 @@
-# Shit I got done
+# Shit got done
 
 Tells you what you did on Clubhouse today/yesterday/this week. Because sometimes we forget what we did yesterday
 
