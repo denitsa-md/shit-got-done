@@ -37,7 +37,7 @@ class ShitGotDoneCommand extends Command
      */
     public function __construct()
     {
-        $this->clubhouseUrl = 'https://api.clubhouse.io/api/v3/search/stories?token=' . config('app.clubhouse_token') . '&';
+        $this->clubhouseUrl = 'https://api.clubhouse.io/api/v3/search/stories?token=' . config('shit-got-done.clubhouse_token') . '&';
         parent::__construct();
     }
 
