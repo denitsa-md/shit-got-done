@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Denitsa\ShitGotDone;
+namespace Denitsa\ShitGotDone\DTOs;
 
 use Carbon\Carbon;
 use Spatie\DataTransferObject\DataTransferObject;
