@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Denitsa\ShitGotDone\Console;
 
-use Denitsa\ShitGotDone\StoryDTO;
+use Denitsa\ShitGotDone\DTOs\StoryDTO;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
